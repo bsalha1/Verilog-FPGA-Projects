@@ -1,0 +1,7 @@
+# No need for:
+
+# Locally cached vivado data.
+.Xil
+
+# Any built stuff.
+output

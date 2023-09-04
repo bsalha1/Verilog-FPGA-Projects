@@ -1,9 +1,12 @@
 # Parse the arguments.
-if { $argc != 4 } {
-    error "$argv0 <name> <fpga> <constraints file> <bitstream file>"
+if { $argc != 5 } {
+    error "$argv0 <name> <fpga> <constraints file> <bitstream file> <threads>"
 } else {
-    lassign $argv name fpga constraints_file bitstream_file
+    lassign $argv name fpga constraints_file bitstream_file threads
 }
+
+# Set the number of threads to use.
+set_param general.maxThreads "${threads}"
 
 # Read in sources.
 read_verilog -sv [glob ./src/*.sv ]

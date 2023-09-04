@@ -11,7 +11,7 @@ module uart_rx_tb(
     logic rx = 0;
     logic rx_complete = 0;
     logic tx_out = 0;
-    
+
     // 100 MHz clock
     always #10 clk = ~clk;
 

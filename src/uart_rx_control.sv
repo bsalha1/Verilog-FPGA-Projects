@@ -29,7 +29,7 @@ module uart_rx_control
      */
     typedef enum {IDLE, START_BIT, DATA, STOP_BIT, COMPLETE} uart_state;
     uart_state state = IDLE;
-    
+
     /*
      * State machine variables.
      */
@@ -52,6 +52,7 @@ module uart_rx_control
         case (state)
 
             IDLE: begin
+
                 /*
                  * Reset all the stateful variables except "data" so that other
                  * peripherals can use the previous "data".

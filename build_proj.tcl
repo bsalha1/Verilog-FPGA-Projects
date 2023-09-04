@@ -1,7 +1,7 @@
 set PROJECT_NAME              blink
 set PROJECT_CONSTRAINT_FILE ./constraints/boolean.xdc
 set OUTPUT_DIR ./output 
-            
+
 file mkdir ${OUTPUT_DIR}
 create_project ${PROJECT_NAME} ${OUTPUT_DIR}/${PROJECT_NAME} -part xc7s50csga324-1
 add_files {./src  }
